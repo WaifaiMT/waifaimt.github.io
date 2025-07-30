@@ -1,4 +1,3 @@
-
 // src/components/ui/Button.tsx
 import { cn } from '@/lib/utils';
 import type { ButtonProps } from '@/types';
@@ -13,16 +12,21 @@ export const Button: React.FC<ButtonProps> = ({
     return (
         <button
             className={cn(
-                "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+                "inline-flex items-center justify-center font-mono text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 disabled:opacity-50 disabled:pointer-events-none relative",
                 {
-                    'bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500': variant === 'primary',
-                    'border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white focus-visible:ring-gray-500': variant === 'secondary',
-                    'text-slate-200 hover:text-teal-300 focus-visible:text-teal-300': variant === 'ghost',
+                    // Primary - Clean teal with minimal styling (Brittany's style)
+                    'bg-transparent border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 hover:shadow-[0_0_20px_rgba(100,255,218,0.3)] focus-visible:ring-[#64ffda]/50 active:bg-[#64ffda]/20': variant === 'primary',
+
+                    // Secondary - Subtle navy with teal border
+                    'bg-transparent border border-slate-600 text-slate-300 hover:border-[#64ffda] hover:text-[#64ffda] hover:shadow-[0_0_15px_rgba(100,255,218,0.2)] focus-visible:ring-[#64ffda]/50': variant === 'secondary',
+
+                    // Ghost - Very minimal, text only
+                    'text-[#64ffda] bg-transparent hover:bg-[#64ffda]/5 hover:shadow-[0_0_10px_rgba(100,255,218,0.2)] focus-visible:text-[#64ffda] focus-visible:ring-[#64ffda]/50': variant === 'ghost',
                 },
                 {
-                    'px-3 py-1.5 text-sm rounded-md': size === 'sm',
-                    'px-4 py-2 text-sm rounded-lg': size === 'md',
-                    'px-6 py-3 text-base rounded-lg': size === 'lg',
+                    'px-4 py-2 text-xs rounded': size === 'sm',
+                    'px-7 py-3 text-sm rounded': size === 'md',
+                    'px-8 py-4 text-sm rounded': size === 'lg',
                 },
                 className
             )}
