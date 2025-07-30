@@ -86,7 +86,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-teal-900/10 backdrop-blur-sm"
             onClick={handleBackdropClick}
         >
-            <div className="bg-slate-800 rounded-xl border border-slate-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto modal-content">
+            <div className="bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-lg p-4 border border-teal-500/20 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-lg relative modal-content">
+
                 {/* Modal Header */}
                 <div className="flex items-center justify-between p-6 border-b border-slate-700">
                     <h3 className="text-2xl font-bold text-slate-200">Send me a message</h3>
