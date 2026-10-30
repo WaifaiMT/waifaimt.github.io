@@ -1,7 +1,7 @@
 // src/components/sections/AboutSection.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import type { SectionProps } from '@/types';
@@ -34,27 +34,18 @@ const TechGrid: React.FC = () => (
     </div>
 );
 
+// Evenly scattered, deterministic particle layout (same on server and client)
+const fract = (n: number) => n - Math.floor(n);
+const particles = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    x: fract(i * 0.618034) * 100,
+    y: fract(i * 0.754878 + 0.3) * 100,
+    delay: fract(i * 0.381966) * 2,
+    duration: 3 + fract(i * 0.569840) * 2,
+}));
+
 export const AboutSection: React.FC<SectionProps> = ({ id, className }) => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
-
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
-
-    // Generate random particles
-    const particles = Array.from({ length: 20 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        delay: Math.random() * 2,
-        duration: 3 + Math.random() * 2,
-    }));
 
     return (
         <section
@@ -155,68 +146,38 @@ export const AboutSection: React.FC<SectionProps> = ({ id, className }) => {
                 {/* Main Content */}
                 <div className="space-y-6">
                     <p className="mb-4">
-                        Currently, I&apos;m a{' '}
-                        <span className="font-medium text-slate-200">Senior Front-End Engineer</span> at{' '}
-                        <a
-                            href="#"
-                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Your Company
-                        </a>
-                        , specializing in building exceptional user experiences. I contribute to the creation and maintenance of UI components that power our platform&apos;s frontend, ensuring our applications meet modern web standards and accessibility best practices.
+                        I&apos;m a full-stack software engineer who ships production SaaS end-to-end — from
+                        database and API design through polished, accessible React front-ends and the
+                        CI/CD pipelines that deploy them. My home base is{' '}
+                        <span className="font-medium text-slate-200">TypeScript, React, and Node.js</span>, and I also
+                        build back-ends in ASP.NET Core and mobile apps in React Native.
                     </p>
                     <p className="mb-4">
-                        In the past, I&apos;ve had the opportunity to develop software across a variety of settings — from{' '}
+                        Since 2021 I&apos;ve been a web developer at{' '}
                         <a
-                            href="#"
+                            href="https://veltetech.com"
                             className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            advertising agencies
-                        </a>{' '}
-                        and{' '}
-                        <a
-                            href="#"
-                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            large corporations
-                        </a>{' '}
-                        to{' '}
-                        <a
-                            href="#"
-                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            start-ups
-                        </a>{' '}
-                        and{' '}
-                        <a
-                            href="#"
-                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            small digital product studios
+                            Velte Technology Solutions
                         </a>
-                        . Additionally, I also released a{' '}
-                        <a
-                            href="#"
-                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            comprehensive video course
-                        </a>{' '}
-                        a few years ago, guiding learners through building modern web applications.
+                        , working remotely with a Canada-based team. There I built Otti, a multi-tenant
+                        membership SaaS, from first MVP to production. On the side I&apos;m building Tsellr, my own
+                        billing and accounting platform for Ghanaian businesses, across web, desktop, and mobile.
                     </p>
                     <p>
-                        In my spare time, I&apos;m usually exploring new technologies, contributing to open-source projects, or capturing the world through photography.
+                        Before I wrote production code, I was a designer. I founded{' '}
+                        <a
+                            href="https://staronestudios.com"
+                            className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            StarOne Studios
+                        </a>{' '}
+                        in 2014 and still run it, doing photography, videography, and brand design. That decade
+                        of creative work is why I care about the details of every interface I build.
                     </p>
                 </div>
             </div>

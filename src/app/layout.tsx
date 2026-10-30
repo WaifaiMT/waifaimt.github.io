@@ -6,23 +6,23 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Gilbert Gyan Addai - Full-Stack Developer & Designer',
-  description: 'I build exceptional digital experiences through thoughtful design and robust engineering.',
-  keywords: ['developer', 'designer', 'react', 'nextjs', 'typescript', 'javascript', 'photography'],
-  authors: [{ name: 'Gilbert Gyan Addai' }],
-  creator: 'Gilbert Gyan Addai',
+  title: 'Gilbert Addai Gyan — Full-Stack Software Engineer',
+  description: 'Full-stack software engineer building production SaaS end-to-end with TypeScript, React, Node.js, and PostgreSQL.',
+  keywords: ['full-stack engineer', 'software engineer', 'react', 'nextjs', 'typescript', 'node.js', 'postgresql', 'saas', 'ghana'],
+  authors: [{ name: 'Gilbert Addai Gyan' }],
+  creator: 'Gilbert Addai Gyan',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://gilbertgyanaddai.com',
-    title: 'Gilbert Gyan Addai - Full-Stack Developer & Designer',
-    description: 'I build exceptional digital experiences through thoughtful design and robust engineering.',
-    siteName: 'Gilbert Gyan Addai Portfolio',
+    title: 'Gilbert Addai Gyan — Full-Stack Software Engineer',
+    description: 'Full-stack software engineer building production SaaS end-to-end with TypeScript, React, Node.js, and PostgreSQL.',
+    siteName: 'Gilbert Addai Gyan',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gilbert Gyan Addai - Full-Stack Developer & Designer',
-    description: 'I build exceptional digital experiences through thoughtful design and robust engineering.',
+    title: 'Gilbert Addai Gyan — Full-Stack Software Engineer',
+    description: 'Full-stack software engineer building production SaaS end-to-end with TypeScript, React, Node.js, and PostgreSQL.',
     creator: '@waifai_agg',
   },
   robots: {
