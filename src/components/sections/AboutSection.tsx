@@ -153,7 +153,7 @@ export const AboutSection: React.FC<SectionProps> = ({ id, className }) => {
                         build back-ends in ASP.NET Core and mobile apps in React Native.
                     </p>
                     <p className="mb-4">
-                        Since 2021 I&apos;ve been a web developer at{' '}
+                        Since 2021 I&apos;ve worked at{' '}
                         <a
                             href="https://veltetech.com"
                             className="font-medium text-slate-200 hover:text-[#64ffda] focus-visible:text-[#64ffda] transition-colors"
@@ -162,7 +162,8 @@ export const AboutSection: React.FC<SectionProps> = ({ id, className }) => {
                         >
                             Velte Technology Solutions
                         </a>
-                        , working remotely with a Canada-based team. There I built Otti, a multi-tenant
+                        , a Canada-based company: first as a software engineer, then managing its 9-person
+                        Ghana office, and now as a DevOps engineer. There I built Otti, a multi-tenant
                         membership SaaS, from first MVP to production. On the side I&apos;m building Tsellr, my own
                         billing and accounting platform for Ghanaian businesses, across web, desktop, and mobile.
                     </p>

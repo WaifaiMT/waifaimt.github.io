@@ -6,6 +6,9 @@ import type { ProjectCardProps } from '@/types';
 import Image from 'next/image';
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
+    // Link the title to the live site, or to the code when there's no live site
+    const href = project.links?.external ?? project.links?.github;
+
     return (
         <li className={`mb-12 ${className}`}>
             <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -13,9 +16,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) 
 
                 <div className="z-10 sm:order-2 sm:col-span-6">
                     <h3>
-                        {project.links?.external ? (
+                        {href ? (
                             <a
-                                href={project.links.external}
+                                href={href}
                                 className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
                                 target="_blank"
                                 rel="noreferrer"

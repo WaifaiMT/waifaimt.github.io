@@ -28,6 +28,18 @@ export const featuredProjects: Project[] = [
     madeAt: "Personal Project"
   },
   {
+    id: "doc-extract-ai",
+    title: "Doc Extract AI",
+    description: "Upload a contract and get its key clauses with risk ratings, then ask questions answered only from the document. Built on the Claude API with structured outputs validated by Zod; every quote the model returns is checked against the original text, so invented clauses are flagged, and answers come with citations to the exact passage.",
+    technologies: ["TypeScript", "Claude API", "Zod", "Express", "React", "Vitest"],
+    links: {
+      github: "https://github.com/WaifaiMT/doc-extract-ai"
+    },
+    featured: true,
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
     id: "legal-mate",
     title: "Legal Mate — Mobile App",
     description: "Built the iOS/Android companion app for a multi-tenant law-firm SaaS: clients view cases, documents, appointments, and invoices, pay through Stripe, and message their firm in real time over server-sent events. Security-first by design — biometric unlock, encrypted token storage, inactivity timeout, screen-capture protection, and permission-aware UI with per-firm branding.",
@@ -166,6 +178,26 @@ export const archiveProjects: ArchiveProject[] = [
     },
     year: "2025",
     madeAt: "Personal Project"
+  },
+  {
+    id: "moms-meet",
+    title: "MoMs Meet",
+    description: "Social networking platform with communities, posts, real-time messaging, notifications, and admin moderation tools",
+    technologies: ["React", "Redux", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    links: {},
+    year: "2024",
+    madeAt: "Client Project"
+  },
+  {
+    id: "game-store-api",
+    title: "GameStore API",
+    description: "ASP.NET Core minimal API with EF Core, migrations, and validation (learning project)",
+    technologies: ["C#", "ASP.NET Core", "EF Core", "SQLite"],
+    links: {
+      github: "https://github.com/WaifaiMT/game-store-api"
+    },
+    year: "2024",
+    madeAt: "Learning Project"
   },
   {
     id: "rescue-women",
