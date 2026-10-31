@@ -73,6 +73,17 @@ export const featuredProjects: Project[] = [
 
 export const archiveProjects: ArchiveProject[] = [
   {
+    id: "vps-deploy-playbook",
+    title: "VPS Deploy Playbook",
+    description: "Open-source kit for deploying Node.js, Next.js, and static sites to a Linux VPS: atomic releases with automatic rollback, Nginx and PM2 templates, and GitHub Actions workflows",
+    technologies: ["Bash", "Nginx", "PM2", "GitHub Actions", "Linux"],
+    links: {
+      github: "https://github.com/WaifaiMT/vps-deploy-playbook"
+    },
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
     id: "tsellr-landing",
     title: "Tsellr Landing Site",
     description: "Marketing site for the Tsellr platform",
