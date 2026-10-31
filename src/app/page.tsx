@@ -27,39 +27,26 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Desktop Layout */}
-      <div className="hidden lg:block">
-        {/* Left sidebar - Fixed */}
-        <div className="fixed top-0 left-0 h-screen w-[50%] max-w-2xl flex flex-col justify-between py-24 pl-24 pr-12 z-20">
-          <div>
-            <Header />
-            <DesktopNavigation />
-          </div>
-          <SocialLinks />
+      {/* Desktop-only fixed sidebar */}
+      <div className="hidden lg:flex fixed top-0 left-0 h-screen w-[50%] max-w-2xl flex-col justify-between py-24 pl-24 pr-12 z-20">
+        <div>
+          <Header />
+          <DesktopNavigation />
         </div>
-
-        {/* Right content area */}
-        <div className="ml-auto w-[50%] min-h-screen py-24 pl-12 pr-24">
-          <div className="max-w-2xl">
-            <AboutSection id="about" />
-            <ExperienceSection id="experience" />
-            <ProjectsSection id="projects" />
-            <GetInTouchSection id="contact" />
-            <Footer />
-          </div>
-        </div>
+        <SocialLinks />
       </div>
 
-      {/* Mobile Layout */}
-      <div className="lg:hidden">
-        <div className="mx-auto max-w-screen-xl px-6 pt-4 pb-12 font-sans md:px-12 md:pb-20">
+      {/* Content is rendered once (section ids must be unique for scroll links);
+          on desktop it moves into the right half beside the sidebar */}
+      <main className="mx-auto max-w-screen-xl px-6 pt-4 pb-12 font-sans md:px-12 md:pb-20 lg:ml-auto lg:mr-0 lg:w-[50%] lg:min-h-screen lg:max-w-none lg:py-24 lg:pl-12 lg:pr-24">
+        <div className="lg:max-w-2xl">
           <AboutSection id="about" />
           <ExperienceSection id="experience" />
           <ProjectsSection id="projects" />
           <GetInTouchSection id="contact" />
           <Footer />
         </div>
-      </div>
+      </main>
     </div>
   );
 }

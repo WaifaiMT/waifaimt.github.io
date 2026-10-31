@@ -119,9 +119,11 @@ export const archiveProjects: ArchiveProject[] = [
   {
     id: "circle-check",
     title: "Circle Check Driving School",
-    description: "Course, lesson, and student management for a driving school",
+    description: "Website and lesson booking for a driving school in Barrie, Ontario",
     technologies: ["React", "Node.js"],
-    links: {},
+    links: {
+      external: "https://thecirclecheck.com"
+    },
     year: "2025",
     madeAt: "Client Project"
   },
@@ -146,9 +148,11 @@ export const archiveProjects: ArchiveProject[] = [
   {
     id: "mesh-of-mothers",
     title: "Mesh of Mothers",
-    description: "Community organization site with volunteer sign-up and server-side email",
-    technologies: ["React", "Node.js", "Express"],
-    links: {},
+    description: "Community organization site with events, programs, volunteer sign-up, and Stripe donations",
+    technologies: ["React", "Node.js", "Express", "Stripe"],
+    links: {
+      external: "https://meshofmothers.ca"
+    },
     year: "2025",
     madeAt: "Client Project"
   },
@@ -166,9 +170,11 @@ export const archiveProjects: ArchiveProject[] = [
   {
     id: "rescue-women",
     title: "Rescue Women International",
-    description: "Website for an international women's charity",
+    description: "Website for an international women's charity, with events, volunteer sign-up, and donations",
     technologies: ["React", "SEO"],
-    links: {},
+    links: {
+      external: "https://rescuewomeninternational.org"
+    },
     year: "2024",
     madeAt: "Client Project"
   },
@@ -183,12 +189,24 @@ export const archiveProjects: ArchiveProject[] = [
   },
   {
     id: "hestias",
-    title: "Hestias",
-    description: "E-commerce marketplace with Stripe checkout",
+    title: "Hestias Foundation",
+    description: "Website for a children's education charity, with events, programs, and Stripe donations",
     technologies: ["React", "Stripe", "Formik", "Framer Motion"],
-    links: {},
+    links: {
+      external: "https://hestiasfoundation.org"
+    },
     year: "2024",
     madeAt: "Freelance"
+  },
+  {
+    id: "rosy-recreational",
+    title: "Rosy Recreational",
+    description: "Website for an award-winning pool and backyard design company: services, products, portfolio, and contact",
+    technologies: ["React", "Node.js"],
+    links: {
+      external: "https://www.rosyrec.com"
+    },
+    year: "2023",
+    madeAt: "Client Project"
   }
 ];
-
