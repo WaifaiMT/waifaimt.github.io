@@ -8,7 +8,8 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
-import { ImageGallerySection } from '@/components/sections/ImageGallerySection';
+// Gallery hidden until real photography replaces the stock images in ImageGallerySection
+// import { ImageGallerySection } from '@/components/sections/ImageGallerySection';
 import { GetInTouchSection } from '@/components/sections/GetInTouchSection';
 
 export default function HomePage() {
@@ -43,8 +44,7 @@ export default function HomePage() {
             <AboutSection id="about" />
             <ExperienceSection id="experience" />
             <ProjectsSection id="projects" />
-            <ImageGallerySection id="gallery" />
-            <GetInTouchSection id="get-in-touch" />
+            <GetInTouchSection id="contact" />
             <Footer />
           </div>
         </div>
@@ -56,7 +56,6 @@ export default function HomePage() {
           <AboutSection id="about" />
           <ExperienceSection id="experience" />
           <ProjectsSection id="projects" />
-          <ImageGallerySection id="gallery" />
           <GetInTouchSection id="contact" />
           <Footer />
         </div>

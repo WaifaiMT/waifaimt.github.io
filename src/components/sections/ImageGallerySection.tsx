@@ -1,7 +1,7 @@
 // src/components/sections/ImageGallerySection.tsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -80,14 +80,21 @@ export const ImageGallerySection: React.FC<SectionProps> = ({ id, className }) =
         ? galleryImages
         : galleryImages.filter(img => img.category === selectedCategory);
 
+    // Lock page scroll while the lightbox is open
+    useEffect(() => {
+        if (!selectedImage) return;
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedImage]);
+
     const openLightbox = (image: GalleryImage) => {
         setSelectedImage(image);
-        document.body.style.overflow = 'hidden';
     };
 
     const closeLightbox = () => {
         setSelectedImage(null);
-        document.body.style.overflow = 'unset';
     };
 
     const navigateImage = (direction: 'prev' | 'next') => {
@@ -184,7 +191,7 @@ export const ImageGallerySection: React.FC<SectionProps> = ({ id, className }) =
                         <Button
                             variant="secondary"
                             size="lg"
-                            onClick={() => window.open('https://your-photography-site.com', '_blank')}
+                            onClick={() => window.open('https://staronestudios.com', '_blank')}
                         >
                             View Full Portfolio
                             <ArrowUpRight className="ml-2 w-4 h-4" />

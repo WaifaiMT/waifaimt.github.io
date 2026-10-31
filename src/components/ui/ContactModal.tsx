@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import { X, Send } from 'lucide-react';
 import { Button } from './Button';
+import { personalInfo } from '@/data/personal';
 
 interface FormData {
     name: string;
@@ -57,20 +58,19 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        setTimeout(() => {
-            console.log('Form submitted:', formData);
-            setIsSubmitting(false);
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            });
-            alert('Message sent successfully!');
-            onClose();
-        }, 1000);
+        // No backend yet: hand the message to the visitor's email client
+        const subject = formData.subject || `Message from ${formData.name}`;
+        const body = `${formData.message}\n\n— ${formData.name} (${formData.email})`;
+        window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        setIsSubmitting(false);
+        setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+        onClose();
     };
 
     const handleBackdropClick = (e: React.MouseEvent) => {

@@ -2,139 +2,193 @@
 // src/data/projects.ts
 import { Project, ArchiveProject } from '@/types';
 
+// Client projects are private codebases — no GitHub links. Add live URLs
+// (and screenshots via `image`) only where the client is happy to be shown.
 export const featuredProjects: Project[] = [
   {
-    id: "web-course",
-    title: "Build a Modern Web App",
-    description: "Video course that teaches how to build a web app with modern frameworks and APIs. Topics covered include the principles of REST APIs, user auth flows, React, Node.js, Express, styled components, and more.",
-    technologies: ["React", "Express", "Node.js", "JavaScript"],
+    id: "otti",
+    title: "Otti",
+    description: "Multi-tenant membership management SaaS that I grew from the MVP I built (Membrr). Each organization gets an isolated PostgreSQL schema, with subscription packages and invoicing at the platform level, plus member profiles, payments via Stripe, bulk email and SMS through Redis/BullMQ queues, role-based access, and reporting.",
+    technologies: ["Next.js 15", "React 19", "TypeScript", "Express", "PostgreSQL", "Redis", "BullMQ", "Stripe"],
     links: {
-      external: "https://example.com/course",
-      github: "https://github.com/yourusername/course"
+      external: "https://managewithotti.com"
     },
     featured: true,
-    year: "2024",
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "tsellr",
+    title: "Tsellr",
+    description: "My own product, currently in staging: a billing, invoicing, and accounting platform for Ghanaian businesses across web, desktop, and mobile — with GRA tax compliance, Mobile Money and Paystack payments, SMS OTP, and offline-first SQLite that syncs in real time over SignalR.",
+    technologies: ["ASP.NET Core", "C#", "React 19", "PostgreSQL", "Redis", "SignalR", "Tauri", "React Native"],
+    links: {},
+    featured: true,
+    year: "2026",
     madeAt: "Personal Project"
   },
   {
-    id: "profile-dashboard",
-    title: "Personal Profile Dashboard",
-    description: "Web app for visualizing personalized data and analytics. View your top metrics, recent activity, detailed information about each interaction. Create and save new custom dashboards based on your preferences and more.",
-    technologies: ["React", "Express", "JavaScript", "Node.js"],
-    links: {
-      external: "https://dashboard.example.com",
-      github: "https://github.com/yourusername/dashboard"
-    },
+    id: "legal-mate",
+    title: "Legal Mate — Mobile App",
+    description: "Built the iOS/Android companion app for a multi-tenant law-firm SaaS: clients view cases, documents, appointments, and invoices, pay through Stripe, and message their firm in real time over server-sent events. Security-first by design — biometric unlock, encrypted token storage, inactivity timeout, screen-capture protection, and permission-aware UI with per-firm branding.",
+    technologies: ["React Native", "Expo", "TypeScript", "NativeWind", "Stripe", "SSE", "Jest"],
+    links: {},
     featured: true,
-    year: "2023",
-    madeAt: "Personal Project"
+    year: "2026",
+    madeAt: "Client Project"
   },
   {
-    id: "design-system",
-    title: "Design System Theme",
-    description: "Minimal dark theme for VS Code, Sublime Text, Atom, iTerm, and more. Available as an extension with 100k+ installations across various editors and platforms.",
-    technologies: ["VS Code", "Sublime Text", "iTerm2", "Hyper"],
-    links: {
-      external: "https://marketplace.visualstudio.com/items?itemName=theme",
-      github: "https://github.com/yourusername/theme"
-    },
+    id: "velte-hub",
+    title: "Velte Hub — Deployment",
+    description: "Set up production and staging deployment for a multi-tenant project and customer management SaaS: GitHub Actions pipelines that build and ship over SSH to a Linux VPS, Nginx reverse proxy, PM2 process management, server provisioning scripts, and a separate Supabase staging environment.",
+    technologies: ["GitHub Actions", "Nginx", "PM2", "Linux", "Supabase", "CI/CD"],
+    links: {},
     featured: true,
-    year: "2023",
-    madeAt: "Open Source"
+    year: "2026",
+    madeAt: "Client Project"
+  },
+  {
+    id: "npp-canada-connect",
+    title: "NPP Canada Connect — Deployment",
+    description: "Deployed a membership platform for a diaspora organization across Canadian provinces, with separate staging and production GitHub Actions pipelines that build the React front-end, inject environment secrets, and release to the server over SSH with PM2 process management.",
+    technologies: ["GitHub Actions", "CI/CD", "PM2", "Linux", "Node.js"],
+    links: {},
+    featured: true,
+    year: "2026",
+    madeAt: "Client Project"
   }
 ];
 
 export const archiveProjects: ArchiveProject[] = [
   {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration",
-    technologies: ["React", "Next.js", "Stripe", "PostgreSQL"],
+    id: "tsellr-landing",
+    title: "Tsellr Landing Site",
+    description: "Marketing site for the Tsellr platform",
+    technologies: ["Astro", "React 19", "Tailwind CSS"],
+    links: {},
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
+    id: "velte-mailer",
+    title: "Velte Mailer",
+    description: "Multi-tenant transactional email API with per-tenant keys, rate limiting, and bot protection — built in both Node.js and .NET",
+    technologies: ["Node.js", "ASP.NET Core", "Nodemailer", "MailKit"],
+    links: {},
+    year: "2026",
+    madeAt: "Client Project"
+  },
+  {
+    id: "rebootghana",
+    title: "Reboot Ghana",
+    description: "E-commerce store, POS, and inventory system for a refurbished-electronics business",
+    technologies: ["Next.js", "ASP.NET Core", "Entity Framework Core", "Paystack"],
+    links: {},
+    year: "2025",
+    madeAt: "Personal Project"
+  },
+  {
+    id: "starone-studios",
+    title: "StarOne Studios",
+    description: "Website and content management for my creative studio",
+    technologies: ["React", "Node.js"],
     links: {
-      external: "https://ecommerce.example.com",
-      github: "https://github.com/yourusername/ecommerce"
+      external: "https://staronestudios.com"
     },
-    year: "2024",
+    year: "2025",
+    madeAt: "StarOne Studios"
+  },
+  {
+    id: "muvule",
+    title: "Muvule",
+    description: "Full-stack app with auth, payments, and a Jest test suite",
+    technologies: ["Next.js 15", "Prisma", "PostgreSQL", "NextAuth", "Stripe"],
+    links: {},
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "membrr",
+    title: "Membrr",
+    description: "The membership-management MVP I built, with payments and bulk email/SMS queues — later became Otti",
+    technologies: ["Next.js", "Express", "PostgreSQL", "BullMQ"],
+    links: {},
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "circle-check",
+    title: "Circle Check Driving School",
+    description: "Course, lesson, and student management for a driving school",
+    technologies: ["React", "Node.js"],
+    links: {},
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "bodomasi-dashboard",
+    title: "Bodomasi Dashboard",
+    description: "Membrr adapted for a single organization: payments, reports, and audit trails",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "Docker"],
+    links: {},
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "leaving-a-legacy",
+    title: "Leaving A Legacy",
+    description: "Website for a nonprofit I first supported as a volunteer",
+    technologies: ["React", "Node.js", "Express"],
+    links: {},
+    year: "2025",
     madeAt: "Freelance"
   },
   {
-    id: "corporate-website",
-    title: "Corporate Website Redesign",
-    description: "Modern responsive website for enterprise client",
-    technologies: ["Next.js", "Tailwind CSS", "Contentful"],
+    id: "mesh-of-mothers",
+    title: "Mesh of Mothers",
+    description: "Community organization site with volunteer sign-up and server-side email",
+    technologies: ["React", "Node.js", "Express"],
+    links: {},
+    year: "2025",
+    madeAt: "Client Project"
+  },
+  {
+    id: "portfolio",
+    title: "This Portfolio",
+    description: "The site you're on",
+    technologies: ["Next.js 15", "React 19", "Tailwind CSS v4"],
     links: {
-      external: "https://corporate.example.com"
+      github: "https://github.com/WaifaiMT/portfolio-v2"
     },
+    year: "2025",
+    madeAt: "Personal Project"
+  },
+  {
+    id: "rescue-women",
+    title: "Rescue Women International",
+    description: "Website for an international women's charity",
+    technologies: ["React", "SEO"],
+    links: {},
     year: "2024",
-    madeAt: "Your Agency"
+    madeAt: "Client Project"
   },
   {
-    id: "mobile-banking",
-    title: "Mobile Banking App",
-    description: "React Native banking application with biometric authentication",
-    technologies: ["React Native", "TypeScript", "Firebase"],
-    links: {
-      external: "https://banking.example.com",
-      github: "https://github.com/yourusername/banking"
-    },
-    year: "2023",
-    madeAt: "Tech Startup Inc."
+    id: "fortress-city-chapel",
+    title: "Fortress City Chapel",
+    description: "Church website",
+    technologies: ["React"],
+    links: {},
+    year: "2024",
+    madeAt: "Client Project"
   },
   {
-    id: "component-library",
-    title: "Design System Library",
-    description: "Reusable component library with Storybook documentation",
-    technologies: ["React", "Storybook", "Styled Components"],
-    links: {
-      github: "https://github.com/yourusername/components"
-    },
-    year: "2023",
-    madeAt: "Tech Startup Inc."
-  },
-  {
-    id: "photography-portfolio",
-    title: "Portfolio Photography Site",
-    description: "Elegant portfolio website for professional photographer",
-    technologies: ["Gatsby", "GraphQL", "Netlify CMS"],
-    links: {
-      external: "https://photography.example.com"
-    },
-    year: "2023",
+    id: "hestias",
+    title: "Hestias",
+    description: "E-commerce marketplace with Stripe checkout",
+    technologies: ["React", "Stripe", "Formik", "Framer Motion"],
+    links: {},
+    year: "2024",
     madeAt: "Freelance"
-  },
-  {
-    id: "task-dashboard",
-    title: "Task Management Dashboard",
-    description: "Team collaboration tool with real-time updates",
-    technologies: ["Vue.js", "Node.js", "MongoDB"],
-    links: {
-      external: "https://tasks.example.com",
-      github: "https://github.com/yourusername/tasks"
-    },
-    year: "2022",
-    madeAt: "Creative Agency LLC"
-  },
-  {
-    id: "brand-identity",
-    title: "Brand Identity System",
-    description: "Complete brand identity package for startup client",
-    technologies: ["Figma", "Adobe Creative Suite"],
-    links: {
-      external: "https://brand.example.com"
-    },
-    year: "2022",
-    madeAt: "Creative Agency LLC"
-  },
-  {
-    id: "real-estate",
-    title: "Real Estate Platform",
-    description: "Property listing and management system",
-    technologies: ["React", "Django", "PostgreSQL"],
-    links: {
-      external: "https://realestate.example.com"
-    },
-    year: "2022",
-    madeAt: "Creative Agency LLC"
   }
 ];
 
