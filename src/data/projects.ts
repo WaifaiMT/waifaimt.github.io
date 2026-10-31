@@ -158,7 +158,7 @@ export const archiveProjects: ArchiveProject[] = [
     description: "The site you're on",
     technologies: ["Next.js 15", "React 19", "Tailwind CSS v4"],
     links: {
-      github: "https://github.com/WaifaiMT/portfolio-v2"
+      github: "https://github.com/WaifaiMT/waifaimt.github.io"
     },
     year: "2025",
     madeAt: "Personal Project"
