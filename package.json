@@ -6,8 +6,8 @@
     "dev": "npm run dev:win",
     "dev:win": "dotenv -e .env next dev",
     "dev:unix": "PORT=$(grep ^PORT= .env | cut -d= -f2) next dev",
-    "build": "next build && cp -r public .next/standalone/",
-    "start": "next start -p 3001",
+    "build": "next build",
+    "start": "npx serve out",
     "lint": "eslint ."
   },
   "dependencies": {
