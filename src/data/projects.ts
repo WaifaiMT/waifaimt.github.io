@@ -28,6 +28,18 @@ export const featuredProjects: Project[] = [
     madeAt: "Personal Project"
   },
   {
+    id: "saas-starter",
+    title: "SaaS Starter",
+    description: "Open-source multi-tenant SaaS starter where every organisation gets its own PostgreSQL schema, the architecture I used for Otti. Roles and permissions, single-use invites, an audit log, and Stripe billing, with 32 integration tests against real PostgreSQL proving one organisation can never reach another's data.",
+    technologies: ["Next.js 16", "TypeScript", "PostgreSQL", "Drizzle", "Stripe", "Vitest"],
+    links: {
+      github: "https://github.com/WaifaiMT/saas-starter"
+    },
+    featured: true,
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
     id: "doc-extract-ai",
     title: "Doc Extract AI",
     description: "Upload a contract and get its key clauses with risk ratings, then ask questions answered only from the document. Built on the Claude API with structured outputs validated by Zod; every quote the model returns is checked against the original text, so invented clauses are flagged, and answers come with citations to the exact passage.",
