@@ -85,6 +85,17 @@ export const featuredProjects: Project[] = [
 
 export const archiveProjects: ArchiveProject[] = [
   {
+    id: "pesewa",
+    title: "pesewa",
+    description: "Open-source TypeScript SDK for taking payments in Ghana: Paystack, Moolre, and MTN MoMo behind one interface. Webhooks are authenticated and every payment is re-confirmed with the provider before it counts. Amounts in pesewas, zero dependencies, tested on Node 18 to 24.",
+    technologies: ["TypeScript", "Paystack", "MTN MoMo", "Moolre", "Vitest"],
+    links: {
+      github: "https://github.com/WaifaiMT/pesewa"
+    },
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
     id: "vps-deploy-playbook",
     title: "VPS Deploy Playbook",
     description: "Open-source kit for deploying Node.js, Next.js, and static sites to a Linux VPS: atomic releases with automatic rollback, Nginx and PM2 templates, and GitHub Actions workflows",
