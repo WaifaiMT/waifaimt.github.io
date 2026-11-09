@@ -40,6 +40,19 @@ export const featuredProjects: Project[] = [
     madeAt: "Personal Project"
   },
   {
+    id: "ae-bridge",
+    title: "ae-bridge",
+    description: "Open-source MCP server that lets AI agents drive Adobe After Effects: build comps, add layers and effects, set keyframes and expressions, turn Illustrator logos into shape layers, and render. Every call is one undo step, and the tests run without After Effects.",
+    technologies: ["Python", "MCP", "ExtendScript", "After Effects", "pytest"],
+    links: {
+      github: "https://github.com/WaifaiMT/ae-bridge"
+    },
+    featured: true,
+    image: "/images/projects/ae-bridge.gif",
+    year: "2026",
+    madeAt: "Personal Project"
+  },
+  {
     id: "doc-extract-ai",
     title: "Doc Extract AI",
     description: "Upload a contract and get its key clauses with risk ratings, then ask questions answered only from the document. Built on the Claude API with structured outputs validated by Zod; every quote the model returns is checked against the original text, so invented clauses are flagged, and answers come with citations to the exact passage.",
@@ -102,17 +115,6 @@ export const archiveProjects: ArchiveProject[] = [
     technologies: ["Bash", "Nginx", "PM2", "GitHub Actions", "Linux"],
     links: {
       github: "https://github.com/WaifaiMT/vps-deploy-playbook"
-    },
-    year: "2026",
-    madeAt: "Personal Project"
-  },
-  {
-    id: "ae-bridge",
-    title: "ae-bridge",
-    description: "Open-source MCP server that lets AI agents drive Adobe After Effects: build comps, add layers and effects, set keyframes and expressions, turn Illustrator logos into shape layers, and render. Every call is one undo step, and the tests run without After Effects.",
-    technologies: ["Python", "MCP", "ExtendScript", "After Effects", "pytest"],
-    links: {
-      github: "https://github.com/WaifaiMT/ae-bridge"
     },
     year: "2026",
     madeAt: "Personal Project"
