@@ -34,12 +34,12 @@ export const experiences: Experience[] = [
   },
   {
     id: "leaving-a-legacy",
-    position: "IT Support & Creative Specialist (Volunteer)",
-    company: "Leaving A Legacy LLC",
-    period: "2018 — 2020",
-    description: "Provided IT and audio-visual support for organizational events, coordinated meetings and technical initiatives, and produced photography, video, and promotional design that strengthened the organization's digital presence.",
+    position: "Co-Founder & IT/Creative Lead",
+    company: "Leaving A Legacy (nonprofit)",
+    period: "2018 — Present",
+    description: "Co-founded a Berekum charity that grew from a group of friends giving out food at Christmas into an organization supporting families and children's education across Berekum Municipality. I lead its IT and creative work (audio-visual and tech support for events and outreach; photo, video, and design for its campaigns and donation drives) and built its website.",
     technologies: ["IT Support", "Photoshop", "Illustrator", "Premiere Pro", "Photography", "Videography"],
-    current: false
+    current: true
   },
   {
     id: "starone",
