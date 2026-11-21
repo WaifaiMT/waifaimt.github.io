@@ -7,10 +7,10 @@ export const experiences: Experience[] = [
     position: "DevOps Engineer",
     company: "Velte Technology Solutions",
     companyUrl: "https://veltetech.com",
-    period: "Feb 2026 — Present",
+    period: "Feb 2026 — Jun 2026",
     description: "Set up CI/CD for two production SaaS platforms: GitHub Actions staging and production pipelines, SSH releases to Linux servers, Nginx, PM2, and server provisioning. Also built the iOS/Android app for Legal Mate, a law-firm SaaS, and Velte Mailer, a multi-tenant email API.",
     technologies: ["GitHub Actions", "Linux", "Nginx", "PM2", "Docker", "React Native", "Expo", ".NET"],
-    current: true
+    current: false
   },
   {
     id: "velte-branch-manager",
